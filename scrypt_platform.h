@@ -1,0 +1,6 @@
+#ifndef _SCRYPT_PLATFORM_H_
+#define	_SCRYPT_PLATFORM_H_
+
+#define USE_OPENSSL_PBKDF2
+
+#endif /* !_SCRYPT_PLATFORM_H_ */
