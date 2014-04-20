@@ -22,7 +22,7 @@ this command mounts it at `/mnt/somewhere`:
 ```
 # losetup -f --show $file
 	loop0
-# android-decryptvol /dev/loop0 /mnt/somewhere p4ssw0rd`
+# android-decryptvol /dev/loop0 /mnt/somewhere p4ssw0rd
 ```
 
 The program will tell you if something went wrong, e.g. you used the wrong
