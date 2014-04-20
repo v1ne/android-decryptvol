@@ -1,4 +1,4 @@
-= Description =
+# Description
 
 Ever got your display broken or had a backup of you Android's block devices 
 and needed access to your files?
@@ -6,7 +6,7 @@ Oh, of course, you enabled Android's device encryption...
 
 With this tool, you can easily decrypt the block device on your PC.
 
-= Build =
+# Build
 
 You need to have at least the Linux headers installed, adjust the Makefile.
 
@@ -14,7 +14,7 @@ You need to have at least the Linux headers installed, adjust the Makefile.
 
 Now, you built `android-decryptvol`.
 
-= Usage =
+# Usage
 
 `android-decryptvol device mountpoint password`
 
