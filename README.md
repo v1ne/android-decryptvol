@@ -16,11 +16,22 @@ Now, you built `android-decryptvol`.
 
 # Usage
 
-`android-decryptvol device mountpoint password`
+Assuming, your encrypted partition is `$file` and your password is `p4ssw0rd`,
+this command mounts it at `/mnt/somewhere`:
 
-If you have a file, run losetup -f --show $file to create a block device from 
-it, e.g. /dev/loop0. Else, supply the block device.
-The tool tries to mount your filesystem to check if the decryption succeeded,
-so supply a directory as mount point.
-Also, supply the right password. ;-) Using a wrong password will result in a 
-message.
+```
+# losetup -f --show $file
+	loop0
+# android-decryptvol /dev/loop0 /mnt/somewhere p4ssw0rd`
+```
+
+The program will tell you if something went wrong, e.g. you used the wrong
+password.
+
+Then, copy your data and unmount the image:
+
+```
+# umount /mnt/somewhere
+# dmsetup remove AndroidData
+# losetup -d loop0
+```
